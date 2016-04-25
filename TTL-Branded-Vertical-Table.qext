@@ -1,0 +1,9 @@
+{
+    "name" : "TTL Vertical Table",
+    "description" : "Table with hard coded Trainline branding",
+    "icon" : "table",
+    "type" : "visualization",
+    "version": "0.1.0",
+    "preview" : "TTL-Branded-Vertical-Table.png",
+    "author": "Nigel Wade"
+}

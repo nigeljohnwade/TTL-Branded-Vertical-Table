@@ -1,0 +1,42 @@
+div.table-style-3,div.table-style-3a{
+    font-family: TLCircular;
+    font-size: 13px;
+}
+div.table-style-3 table{
+    border-bottom: #21314D 12px solid;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+div.table-style-3 table tr{
+    background-color: #f0f0f0;
+}
+div.table-style-3 table thead[scope=row] th{
+    background-color: #9098A6;
+    color: #fff;
+    font-weight: bold;
+}
+.qv-object-content-container .qv-object-content div.table-style-3 table tbody tr {
+    background-color: #f0f0f0;
+}
+.qv-object-content-container .qv-object-content div.table-style-3 table tbody tr:nth-child(2n+2){
+    background-color: #D3D6DB;
+}
+div.table-style-3 table thead th.group{
+    font-size: 18px;
+    text-align: center;
+    background-color: #48D5B5;
+    color: #000;
+    font-weight: bold;
+    padding: 6px 12px;
+}
+div.table-style-3 table thead th.item{
+    text-align: left;
+    background-color: #21314D;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 12px;
+}
+div.table-style-3 table tbody td{
+    text-align: left;
+    padding: 6px 12px;
+}

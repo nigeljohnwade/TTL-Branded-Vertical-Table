@@ -7,17 +7,14 @@
                     <th colspan="2" class="group">Grouping</th>
                 </tr>
                 <tr>
-                    <th ng-repeat="row in layout.qHyperCube.qDimensionInfo" class="item">
-                        {{row.qFallbackTitle}}
-                    </th>
-                    <th ng-repeat="row in layout.qHyperCube.qMeasureInfo" class="item">
+                    <th ng-repeat="row in table.headers" class="item">
                         {{row.qFallbackTitle}}
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="row in  layout.qHyperCube.qDataPages[0].qMatrix">
-                    <td ng-repeat="item in row">
+                <tr ng-repeat="row in  table.rows">
+                    <td ng-repeat="item in row.cells">
                         {{item.qText}}
                     </td>
                 </tr>

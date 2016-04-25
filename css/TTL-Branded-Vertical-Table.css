@@ -1,27 +1,35 @@
-div.table-style-3,div.table-style-3a{
+div.ttl-table caption{
+    caption-side: bottom;
+    text-align: left;
+}
+div.ttl-table{
     font-family: TLCircular;
     font-size: 13px;
 }
-div.table-style-3 table{
+div.ttl-table table{
     border-bottom: #21314D 12px solid;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
 }
-div.table-style-3 table tr{
+div.ttl-table thead tr:first-child th:first-child{
+    border-top-left-radius: 12px;
+}
+div.ttl-table thead tr:first-child th:last-child{
+    border-top-right-radius: 12px;
+}
+div.ttl-table table tr{
     background-color: #f0f0f0;
 }
-div.table-style-3 table thead[scope=row] th{
+div.ttl-table table thead[scope=row] th{
     background-color: #9098A6;
     color: #fff;
     font-weight: bold;
 }
-.qv-object-content-container .qv-object-content div.table-style-3 table tbody tr {
+.qv-object-content-container .qv-object-content div.ttl-table table tbody tr {
     background-color: #f0f0f0;
 }
-.qv-object-content-container .qv-object-content div.table-style-3 table tbody tr:nth-child(2n+2){
+.qv-object-content-container .qv-object-content div.ttl-table table tbody tr:nth-child(2n+2){
     background-color: #D3D6DB;
 }
-div.table-style-3 table thead th.group{
+div.ttl-table table thead th.group{
     font-size: 18px;
     text-align: center;
     background-color: #48D5B5;
@@ -29,14 +37,17 @@ div.table-style-3 table thead th.group{
     font-weight: bold;
     padding: 6px 12px;
 }
-div.table-style-3 table thead th.item{
+div.ttl-table table thead th.item{
     text-align: left;
     background-color: #21314D;
     color: #fff;
     font-weight: bold;
     padding: 6px 12px;
 }
-div.table-style-3 table tbody td{
+div.ttl-table table tbody td{
     text-align: left;
     padding: 6px 12px;
+}
+div.ttl-table table tbody td div.ttl-table-number, div.ttl-table table thead th div.ttl-table-number{
+    text-align: right;
 }

@@ -1,12 +1,27 @@
 <div qv-extension style="height: 100%; position: relative; overflow: auto;" >
-	TTL Branded Table with Angular
-	<div style="height: 100%; position: relative;">
-		<div ng-repeat="row in layout.qHyperCube.qDataPages[0].qMatrix">
-			<div title ='{{row[0].qText}}: {{row[1].qText}}'>
-				<div style='width:15%;height:32px;float:left;font-family:Arial;font-size:12px;line-height:32px;clear:both;overflow:hidden'>{{((row[0].qIsOtherCell)?layout.qHyperCube.qDimensionInfo[0].othersLabel:row[0].qText)}}</div>
-				<div ng-style='getWidth(row, layout.qHyperCube.qMeasureInfo )' style='height:32px;float:left;display:block;background-image : url("/extensions/com-qliktech-angularchart/qlogo.jpg");'>&nbsp;</div>
-				<div style='clear:both'></div>
-				</div>
-		</div>
-	</div>
+	<p>TTL Branded Table with Angular</p>
+	<div style="height: 100%; position: relative;" class="table-style-3">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2" class="group">Grouping</th>
+                </tr>
+                <tr>
+                    <th ng-repeat="row in layout.qHyperCube.qDimensionInfo" class="item">
+                        {{row.qFallbackTitle}}
+                    </th>
+                    <th ng-repeat="row in layout.qHyperCube.qMeasureInfo" class="item">
+                        {{row.qFallbackTitle}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in  layout.qHyperCube.qDataPages[0].qMatrix">
+                    <td ng-repeat="item in row">
+                        {{item.qText}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

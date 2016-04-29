@@ -28,10 +28,10 @@
                     <td ng-repeat="item in row.cells">
                         <div ng-switch="dataTypeCell(item)">
                             <div ng-switch-when="number" class="ttl-table-number">
-                                {{item.qNum.toLocaleString()}}
+                                {{item.qNum.toLocaleString()}}{{item.qElemNumber}}
                             </div>
-                            <div ng-switch-default class="ttl-table-text">
-                                {{item.qText}}
+                            <div ng-switch-default class="ttl-table-text" data-qelemnumber="{{item.qElemNumber}}" ng-click="setSelection($event)">
+                                {{item.qText}}{{item.qElemNumber}}
                             </div>
                         </div>
                     </td>

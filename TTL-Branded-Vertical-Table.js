@@ -22,7 +22,7 @@ define( [
                     qInitialDataFetch: [
                         {
                             qWidth: 10,
-                            qHeight: 5
+                            qHeight: 50
                         }
                     ]
                 }
@@ -31,7 +31,6 @@ define( [
                 if ( !this.$scope.table ) {
                     this.$scope.table = qlik.table( this );
                 }
-                console.log(this.$scope.table)
             },
             controller : ['$scope',
             function($scope) {
@@ -48,6 +47,13 @@ define( [
                         return 'number';
                     }else{
                         return 'text'
+                    }
+                }
+                $scope.setSelection = function(e){
+                    console.log(e);
+                    if(e.target.dataset.qelemnumber) {
+                        var value = parseInt(e.target.dataset.qelemnumber, 10), dim = 0;
+                        $scope.selectValues(dim, [value], true);
                     }
                 }
             }]

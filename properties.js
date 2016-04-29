@@ -6,6 +6,9 @@ define( [], function () {
     var measures = {
         uses: "measures",
     };
+    var sorting = {
+        uses: "sorting"
+    };
     var chartTitle = {
         ref: "ttl-table-props.chartTitle",
         label: "Chart Title",
@@ -31,6 +34,7 @@ define( [], function () {
         items: {
             dimensions: dimensions,
             measures: measures,
+            sorting: sorting,
             customSection: customSection
         }
     };
